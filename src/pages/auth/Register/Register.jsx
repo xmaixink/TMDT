@@ -42,7 +42,7 @@ const Register = () => {
 
       try {
         const response = await axios.post(
-          'http://localhost:8080/api/register',
+          `http://localhost:8080/api/register`,
           values
         );
         if (response.data.errCode === 0) {
