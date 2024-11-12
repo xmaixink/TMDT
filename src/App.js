@@ -16,6 +16,8 @@ import ContactPage from "./pages/Contactpage/Contactpage";
 import HomePage from "./pages/HomePage/HomePage";
 import ProductDetail from "./pages/Product Detail/ProductDetail";
 import ProductPage from "./pages/ProductPage/ProductPage";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const router = createBrowserRouter(
