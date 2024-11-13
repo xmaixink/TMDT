@@ -219,7 +219,7 @@ const ProductPage = () => {
 
   return (
     <div className="product-page">
-
+      <Navbar />
       {fetchProductData && fetchProductData.length > 0 ? (
         <div style={{ textAlign: 'center', padding: '20px' }}>
           <h2 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px', color: 'black' }}>Sản Phẩm</h2>
