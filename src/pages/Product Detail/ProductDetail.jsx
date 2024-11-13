@@ -44,6 +44,7 @@ const ProductDetail = () => {
         <button>Add to Cart</button>
       </div>
     </>
+
   );
 };
 

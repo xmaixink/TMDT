@@ -19,6 +19,7 @@ const validationSchema = yup.object({
 const Login = () => {
   const [loading, setLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+
   const navigate = useNavigate();
 
   const formik = useFormik({
@@ -29,6 +30,7 @@ const Login = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       setLoading(true);
+
       setErrorMessage('');
 
       try {
@@ -95,12 +97,11 @@ const Login = () => {
           <button type="submit" disabled={loading}>
             {loading ? 'Đang đăng nhập...' : 'Đăng Nhập'}
           </button>
-          <div className="register-link">
-            <button onClick={handleRegisterClick}>Chưa có tài khoản? Đăng Ký</button>
-          </div>
         </form>
       </div>
-
+      <div className="register-link">
+        <button onClick={handleRegisterClick}>Chưa có tài khoản? Đăng Ký</button>
+      </div>
     </div>
   );
 };

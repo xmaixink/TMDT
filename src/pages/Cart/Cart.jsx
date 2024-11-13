@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 import axios from "axios";
 import Navbar from "../../components/Navbar";
 
-
 const Cart = () => {
 	const [cartItems, setCartItems] = useState([]);
 	const [total, setTotal] = useState(0);
@@ -196,6 +195,7 @@ const Cart = () => {
 			</div>
 		</div>
 	);
+
 };
 
 export default Cart;

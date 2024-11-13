@@ -25,6 +25,7 @@ const Register = () => {
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
+
       setIsLoggedIn(true);
     }
   }, []);
@@ -38,6 +39,7 @@ const Register = () => {
     validationSchema: validationSchema,
     onSubmit: async (values) => {
       setLoading(true);
+
       setErrorMessage('');
 
       try {
@@ -119,15 +121,14 @@ const Register = () => {
           <button type="submit" disabled={loading}>
             {loading ? 'Đang đăng ký...' : 'Đăng Ký'}
           </button>
-          {!isLoggedIn && (
-            <div className="register-redirect">
-              <span>Đã có tài khoản? </span>
-              <button onClick={handleLoginRedirect}>Đăng Nhập</button>
-            </div>
-          )}
         </form>
       </div>
-
+      {!isLoggedIn && (
+        <div className="register-redirect">
+          <span>Đã có tài khoản? </span>
+          <button onClick={handleLoginRedirect}>Đăng Nhập</button>
+        </div>
+      )}
     </div>
   );
 };
